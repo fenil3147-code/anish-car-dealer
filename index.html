@@ -1,40 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anish Car Dealer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #1a1a1a;
-        }
-        p {
-            color: #555;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anish Performance Motors</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:black;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00A2FF;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00A2FF;
+}
+
+.hero{
+    height:90vh;
+    background:url("https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1600&q=80") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,.65);
+    padding:50px;
+    border-radius:15px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#00A2FF;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#007ACC;
+}
+
+section{
+    padding:70px 8%;
+}
+
+.section-title{
+    font-size:38px;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1c1c1c;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#00A2FF;
+    font-size:22px;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.8;
+}
+
+footer{
+    background:black;
+    text-align:center;
+    padding:25px;
+    color:#999;
+}
+</style>
+
 </head>
 <body>
-    <h1>🚗 Anish Car Dealer</h1>
-    <p>Welcome to Anish Car Dealer. Browse our collection of quality new and used vehicles.</p>
 
-    <a href="#" class="btn">View Cars</a>
+<nav>
+
+<div class="logo">ANISH PERFORMANCE MOTORS</div>
+
+<ul>
+<li><a href="index.html">Landing</a></li>
+<li><a href="#">BMW</a></li>
+<li><a href="#">Hypercars</a></li>
+<li><a href="#">Supercars</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>BMW • Hypercars • Supercars</h1>
+
+<p>Luxury. Performance. Precision.</p>
+
+<a href="#inventory" class="btn">Explore Collection</a>
+
+</div>
+
+</section>
+
+<section id="inventory">
+
+<h2 class="section-title">Featured Inventory</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>BMW M4 Competition</h3>
+<p>503 HP • Twin Turbo • AWD</p>
+<div class="price">$89,900</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Lamborghini Huracán EVO</h3>
+<p>631 HP • V10 • RWD</p>
+<div class="price">$289,000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Ferrari SF90 Stradale</h3>
+<p>986 HP • Hybrid • AWD</p>
+<div class="price">$515,000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>BMW M8 Competition</h3>
+<p>617 HP • Luxury Coupe</p>
+<div class="price">$139,900</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>McLaren 720S</h3>
+<p>710 HP • Twin Turbo V8</p>
+<div class="price">$320,000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Bugatti Chiron</h3>
+<p>1500 HP • Quad Turbo W16</p>
+<div class="price">$3,500,000</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<p>
+Anish Performance Motors specializes in BMW M models, exotic supercars,
+and the world's most exclusive hypercars. Every vehicle is carefully
+selected and inspected to deliver an exceptional driving experience for
+enthusiasts and collectors alike.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Anish Performance Motors | BMW • Hypercars • Supercars
+
+</footer>
 </body>
 </html>
